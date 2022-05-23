@@ -1,10 +1,11 @@
-import React from "../react/umd/react.development.js";
-import ReactDOM from "../react-dom/umd/react-dom.development.js";
-import '../../css/app.css';
-import App from "./components/app.js";
+'use strict';
 
-ReactDOM.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>
-)
+import {React} from "../react/cjs/react.development.js";
+import {ReactDOM} from "../react-dom/cjs/react-dom.development.js";
+import {App} from "./components/app.js";
+
+const e = React.createElement;
+
+const domContainer = document.querySelector('#root');
+const root = ReactDOM.createRoot(domContainer);
+root.render(e(App));
